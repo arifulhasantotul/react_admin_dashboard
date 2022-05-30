@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pie = () => {
+const Line = () => {
   return (
     <div>
       <h1>Pie</h1>
@@ -8,4 +8,4 @@ const Pie = () => {
   );
 };
 
-export default Pie;
+export default Line;

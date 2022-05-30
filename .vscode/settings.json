@@ -27,5 +27,6 @@
   },
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
-  }
+  },
+  "cSpell.words": ["Kanban"]
 }

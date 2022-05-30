@@ -26,7 +26,7 @@ const App = () => {
               Sidebar
             </div>
           ) : (
-            <div className="w-0 dark:bg-secondary-dark-bg">Sidebar w-0</div>
+            <div className="w-0 dark:bg-secondary-dark-bg">Sidebar</div>
           )}
 
           {/* navigation div */}
@@ -38,6 +38,8 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               Navbar
             </div>
+          </div>
+          <div>
             <Routes>
               {/* Dashboard */}
               <Route path="/" element="ECommerce" />
