@@ -28,5 +28,5 @@
   "tailwindCSS.includeLanguages": {
     "plaintext": "html"
   },
-  "cSpell.words": ["Kanban"]
+  "cSpell.words": ["Kanban", "Sparkline", "syncfusion"]
 }

@@ -11,6 +11,6 @@ export { default as ColorPicker } from "./ColorPicker/ColorPicker";
 export { default as Customers } from "./Customers/Customers";
 export { default as ECommerce } from "./ECommerce/ECommerce";
 export { default as Editor } from "./Editor/Editor";
-export { default as Employee } from "./Employee/Employee";
+export { default as Employees } from "./Employees/Employees";
 export { default as Kanban } from "./Kanban/Kanban";
 export { default as Orders } from "./Orders/Orders";
