@@ -35,9 +35,9 @@ export const ContextProvider = ({ children }) => {
     setIsClicked({ ...initialState, [clicked]: true });
   };
   useEffect(() => {
-    const chosenTheme = localStorage.getItem("themeMode");
+    const chosenTheme = localStorage.getItem("themeMode") || "Light";
     setCurrentMode(chosenTheme);
-    const chosenColor = localStorage.getItem("colorMode");
+    const chosenColor = localStorage.getItem("colorMode") || "#03C9D7";
     setCurrentColor(chosenColor);
   }, []);
 
