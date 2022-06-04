@@ -1,9 +1,19 @@
 import React from "react";
+import { ChartsHeader, PieChart } from "../../components";
+import { pieChartData } from "../../data/dummy";
 
 const Pie = () => {
   return (
-    <div>
-      <h2>Pie</h2>
+    <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
+      <ChartsHeader category="Pie" title="Inflation Rate in Percentage" />
+      <div className="w-full">
+        <PieChart
+          id="chart-pie"
+          data={pieChartData}
+          legendVisibility
+          height="full"
+        />
+      </div>
     </div>
   );
 };

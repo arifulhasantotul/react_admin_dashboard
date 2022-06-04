@@ -9,6 +9,7 @@ import {
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
 import React from "react";
+import { useStateContext } from "../../contexts/ContextProvider";
 import {
   stackedCustomSeries,
   stackedPrimaryXAxis,
@@ -16,6 +17,7 @@ import {
 } from "../../data/dummy";
 
 const StackChart = ({ width, height }) => {
+  const { currentMode } = useStateContext();
   return (
     <ChartComponent
       id="charts"
@@ -26,6 +28,7 @@ const StackChart = ({ width, height }) => {
       chartArea={{ border: { width: 0 } }}
       tooltip={{ enable: true }}
       legendSettings={{ background: "white" }}
+      background={currentMode === "Dark" ? "#33373E" : "#fff"}
     >
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>

@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
 import React from "react";
-import { Header } from "../../components";
+import { ChartsHeader } from "../../components";
 import { useStateContext } from "../../contexts/ContextProvider";
 import {
   areaCustomSeries,
@@ -22,7 +22,7 @@ const Area = () => {
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <Header category="Chart" title="Inflation Rate in Percentage" />
+      <ChartsHeader category="Area" title="Inflation Rate in Percentage" />
       <ChartComponent
         id="line-chart"
         height="420px"
