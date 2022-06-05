@@ -59,6 +59,7 @@ export const ContextProvider = ({ children }) => {
         setColor,
         themeSettings,
         setThemeSettings,
+        initialState,
       }}
     >
       {children}
