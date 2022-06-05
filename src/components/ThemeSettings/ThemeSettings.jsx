@@ -6,19 +6,12 @@ import { useStateContext } from "../../contexts/ContextProvider";
 import { themeColors } from "../../data/dummy";
 
 const ThemeSettings = () => {
-  const {
-    currentColor,
-    setCurrentColor,
-    currentMode,
-    setCurrentMode,
-    setMode,
-    setColor,
-    themeSettings,
-    setThemeSettings,
-  } = useStateContext();
+  const { currentColor, currentMode, setMode, setColor, setThemeSettings } =
+    useStateContext();
+
   return (
     <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-      <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484b52] w-400">
+      <div className="float-right h-screen dark:bg-secondary-dark-bg dark:text-gray-200 bg-white dark:[#484b52] w-400">
         <div className="flex justify-between items-center p-4 ml-4">
           <p className="font-semibold text-lg">Settings</p>
           <button
