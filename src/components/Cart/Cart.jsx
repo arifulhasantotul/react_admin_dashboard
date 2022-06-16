@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../../contexts/ContextProvider";
@@ -23,15 +22,19 @@ const Cart = () => {
         {cartData?.map((item, index) => (
           <div key={index}>
             <div>
-              <div className="flex items-center   leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4">
-                <img className="rounded-lg h-80 w-24" src={item.image} alt="" />
+              <div className="flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4">
+                <img
+                  className="rounded-lg h-80 w-24"
+                  src={item?.image}
+                  alt=""
+                />
                 <div>
-                  <p className="font-semibold ">{item.name}</p>
+                  <p className="font-semibold">{item?.name}</p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm font-semibold">
-                    {item.category}
+                    {item?.category}
                   </p>
                   <div className="flex gap-4 mt-2 items-center">
-                    <p className="font-semibold text-lg">{item.price}</p>
+                    <p className="font-semibold text-lg">{item?.price}</p>
                     <div className="flex items-center border-1 border-r-0 border-color rounded">
                       <p className="p-2 border-r-1 dark:border-gray-600 border-color text-red-600 ">
                         <AiOutlineMinus />

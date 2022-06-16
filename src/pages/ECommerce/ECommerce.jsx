@@ -1,4 +1,3 @@
-import React from "react";
 import { GoPrimitiveDot } from "react-icons/go";
 import { Button, SparkChart, StackChart } from "../../components";
 import { useStateContext } from "../../contexts/ContextProvider";
@@ -31,22 +30,29 @@ const ECommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className="bg-white dark:text-grap-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+              className="bg-white dark:text-grap-200 dark:bg-secondary-dark-bg md:w-44 p-4 pt-9 rounded-2xl"
             >
-              <button
-                type="button"
-                style={{ color: item.iconColor, backgroundColor: item.iconBg }}
-                className="text-2xl opacity-0.9 rounded-full hover:drop-shadow-xl p-4"
-              >
-                {item.icon}
-              </button>
-              <p className="mt-3">
+              <div className="flex justify-center">
+                <button
+                  type="button"
+                  style={{
+                    color: item.iconColor,
+                    backgroundColor: item.iconBg,
+                  }}
+                  className="text-2xl opacity-0.9 rounded-full hover:drop-shadow-xl p-4"
+                >
+                  {item.icon}
+                </button>
+              </div>
+              <p className="mt-3 text-center">
                 <span className="text-lg font-semibold">{item.amount}</span>
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
                 </span>
               </p>
-              <p className="text-sm text-gray-400 mt-1">{item.title}</p>
+              <p className="text-sm text-gray-400 mt-1 text-center">
+                {item.title}
+              </p>
             </div>
           ))}
         </div>

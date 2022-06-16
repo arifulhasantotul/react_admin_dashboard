@@ -1,5 +1,5 @@
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsChatLeft } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
@@ -13,9 +13,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <TooltipComponent content={title} position="BottomCenter">
     <button
       type="button"
-      onClick={customFunc}
+      onClick={() => customFunc()}
       style={{ color }}
-      className="relative text-xl rounded-full p-3 hover:bg:light-gray"
+      className="relative text-xl rounded-full p-3 hover:bg-light-gray"
     >
       <span
         style={{ background: dotColor }}
@@ -28,10 +28,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    // activeMenu,
+    activeMenu,
     setActiveMenu,
     isClicked,
-    // setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
@@ -56,12 +55,13 @@ const Navbar = () => {
     }
   }, [screenSize, setActiveMenu]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
     <div className="flex justify-between p-2 md:mx-6 relative top-0 h-16">
       <NavButton
         title="Menu"
-        customFunc={() => setActiveMenu((prevState) => !prevState)}
-        className="dark:hover:text-white"
+        customFunc={handleActiveMenu}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />

@@ -8,7 +8,6 @@ import {
   Inject,
   PieSeries,
 } from "@syncfusion/ej2-react-charts";
-import React from "react";
 import { useStateContext } from "../../contexts/ContextProvider";
 
 const PieChart = ({ id, data, height, legendVisibility }) => {
@@ -47,7 +46,10 @@ const PieChart = ({ id, data, height, legendVisibility }) => {
             visible: true,
             name: "text",
             position: "Inside",
-            font: { fontWeight: "600", color: "#fff" },
+            font: {
+              fontWeight: "600",
+              color: "#fff",
+            },
           }}
         />
       </AccumulationSeriesCollectionDirective>

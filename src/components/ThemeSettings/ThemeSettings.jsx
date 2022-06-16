@@ -1,5 +1,4 @@
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import React from "react";
 import { BsCheck } from "react-icons/bs";
 import { MdOutlineCancel } from "react-icons/md";
 import { useStateContext } from "../../contexts/ContextProvider";
@@ -61,19 +60,19 @@ const ThemeSettings = () => {
             {themeColors.map((item, index) => (
               <TooltipComponent
                 key={index}
-                content={item.name}
+                content={item?.name}
                 position="TopCenter"
               >
                 <div className="relative mt-2 cursor-pointer flex gap-5 items-center">
                   <button
                     type="button"
                     className="rounded-full cursor-pointer h-10 w-10"
-                    style={{ backgroundColor: item.color }}
-                    onClick={() => setColor(item.color)}
+                    style={{ backgroundColor: item?.color }}
+                    onClick={() => setColor(item?.color)}
                   >
                     <BsCheck
                       className={`ml-2 text-2xl text-white ${
-                        item.color === currentColor ? "block" : "hidden"
+                        item?.color === currentColor ? "block" : "hidden"
                       }`}
                     />
                   </button>
